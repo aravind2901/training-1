@@ -385,7 +385,7 @@ ReactDOM.render(<Mynewclass/>,document.getElementById('root'));*/
   // 14.Sass concept:
 
 
-  class Sassconcept extends React.Component{
+ /* class Sassconcept extends React.Component{
     render(){
       return <div>
         <h1>Hai Aravind......</h1>
@@ -394,6 +394,66 @@ ReactDOM.render(<Mynewclass/>,document.getElementById('root'));*/
       </div>
     }
   }
-ReactDOM.render(<Sassconcept/>,document.getElementById('root'));
+ReactDOM.render(<Sassconcept/>,document.getElementById('root'));*/
+
+
+
+// 15.React FORM Concept: IMPORTANT CONCEPT LEARN WELL;
+
+/*class Formconcept extends React.Component{
+  constructor(){
+    super();
+    this.state={myname:" ",
+                 age:null,
+                  errmsg:" "};
+  }
+
+  uservalue = (event)=>
+  {
+
+    let n = event.target.name;
+    let v = event.target.value;
+    let err = " ";
+    if(n==="age"){
+      if(v!=""&&!Number(v)){
+        err=<strong style={{color:'red'}}> Invalid value, your Age should be a number</strong>
+      }
+    }
+    //this.setState({myname:event.target.value})     normal event calling method;
+    this.setState({errmsg:err})
+    this.setState({[n]:v})
+  }
+
+  formsubmit= (event)=>
+  {
+    event.preventDefault();
+    alert("your Name"+"....."+this.state.myname+"......"+"your Age"+"...."+this.state.age);
+  }
+  render()
+  {
+    return(
+
+    <form onSubmit={this.formsubmit}>
+
+       <h1>Hello.....{this.state.myname}</h1>
+       <h2>Your Age.......{this.state.age}</h2>
+
+      <strong style={{color:'blue'}}> Enter your Name.....:</strong>   <input type="text" name="myname" onChange={this.uservalue}/><br/><br/>
+
+      <strong style={{color:'blue'}}> Enter your Age.....:</strong>   <input type="text" name="age" onChange={this.uservalue}/>{this.state.errmsg}<br/><br/>
+      
+      <input type="Submit" />
+    </form>
+     
+   
+    )
+  }
+}
+ReactDOM.render(<Formconcept/>,document.getElementById('root'));*/
+
+
+
+
+//  15. React Fragments:
 
 
