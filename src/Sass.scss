@@ -1,0 +1,22 @@
+$color:red;
+$another:blue;
+$backgroundcolor:pink;
+
+$textalign: center;
+h1{
+    color:$color;
+    text-align: $textalign;
+}
+
+
+h2
+{
+    color:$backgroundcolor;
+    text-align:$textalign;
+}
+
+
+h3{
+    color:$another;
+    text-align:$textalign;
+}

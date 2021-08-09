@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './Sass.scss';
 //import Myclass from './App.js';
 
 //1.class type
@@ -325,7 +326,7 @@ ReactDOM.render(<Mynewclass/>,document.getElementById('root'));*/
   // 13. React LIFECYCLE:
 
 
-  class Lifecycle extends React.Component{
+ /* class Lifecycle extends React.Component{
     constructor(){
       super();
       this.state={value:"Welcome",name:"Guys"}
@@ -377,4 +378,22 @@ ReactDOM.render(<Mynewclass/>,document.getElementById('root'));*/
     }
   }
 
-  ReactDOM.render(<Lifecycle/>,document.getElementById('root'));
+  ReactDOM.render(<Lifecycle/>,document.getElementById('root'));*/
+
+
+
+  // 14.Sass concept:
+
+
+  class Sassconcept extends React.Component{
+    render(){
+      return <div>
+        <h1>Hai Aravind......</h1>
+        <h2>Welcome to.....</h2>
+        <h3>Today class........</h3>
+      </div>
+    }
+  }
+ReactDOM.render(<Sassconcept/>,document.getElementById('root'));
+
+
