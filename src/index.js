@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './Sass.scss';
+import Child from './child';
 //import Myclass from './App.js';
 
 //1.class type
@@ -256,6 +257,21 @@ ReactDOM.render(<Mynewclass/>,document.getElementById('root'));*/
   ReactDOM.render(<Reactprops topic="React props" language="English "/>,document.getElementById('root'));*/
 
 
+//  React props used in FUNCTION:   
+
+
+  /* function Props (props){
+    return(
+    <div>
+       <h1> Hai .....{props.name} </h1>
+       <h1> Hai Aravind:ID.....{props.ID} </h1>
+    </div>
+     
+    )
+  }
+  ReactDOM.render(<Props name ="Aravnd" ID="1000"/>,document.getElementById('root')); */
+
+
   // 11.2  Multiclass using: REACT props:
 
 
@@ -456,7 +472,7 @@ ReactDOM.render(<Formconcept/>,document.getElementById('root'));*/
 
 //  15. React Hooks:
 
-function Reacthooks ()
+/* function Reacthooks ()
 {
   const [count,updatecount] = useState(0);
 
@@ -474,4 +490,24 @@ function Reacthooks ()
   );
 }
 
-ReactDOM.render(<Reacthooks/>,document.getElementById('root'))
+ReactDOM.render(<Reacthooks/>,document.getElementById('root')) */
+
+
+
+
+//  16: props concept using in PARENT and CHILD concept:
+
+
+function Parent (props)
+{
+  return(
+
+    <div>
+     
+     <h1> MY NAME....:{props.name}</h1>
+     <h1> MY ID....:{props.ID}</h1>
+     <Child myskill="HTML , CSS , JAVASCRIPT , REACT JS Developer"></Child>
+    </div>
+  );
+}
+ReactDOM.render(<Parent name="Aravind"  ID={1001}/>,document.getElementById('root'));
