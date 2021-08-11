@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './Sass.scss';
@@ -454,6 +454,24 @@ ReactDOM.render(<Formconcept/>,document.getElementById('root'));*/
 
 
 
-//  15. React Fragments:
+//  15. React Hooks:
 
+function Reacthooks ()
+{
+  const [count,updatecount] = useState(0);
 
+  useEffect(() => {
+    alert("Hai Hello Aravind")
+  })
+ 
+  return(
+    <div>
+      <p>you clicked the above button {count} times</p>
+      <button onClick={()=> updatecount(count + 1)}> Add Me </button>
+      <button onClick={()=> updatecount(count - 1)}> Minus Me </button>
+
+    </div>
+  );
+}
+
+ReactDOM.render(<Reacthooks/>,document.getElementById('root'))
