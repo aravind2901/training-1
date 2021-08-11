@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './Sass.scss';
 import Child from './child';
+import { render } from '@testing-library/react';
 //import Myclass from './App.js';
 
 //1.class type
@@ -498,7 +499,7 @@ ReactDOM.render(<Reacthooks/>,document.getElementById('root')) */
 //  16: props concept using in PARENT and CHILD concept:
 
 
-function Parent (props)
+/* function Parent (props)
 {
   return(
 
@@ -510,4 +511,41 @@ function Parent (props)
     </div>
   );
 }
-ReactDOM.render(<Parent name="Aravind"  ID={1001}/>,document.getElementById('root'));
+ReactDOM.render(<Parent name="Aravind"  ID={1001}/>,document.getElementById('root')); */
+
+
+//   17. React EVENT handling:
+
+
+class Eventhandle extends React.Component{
+  constructor(props){
+    super(props);
+    console.log(this)
+  }
+
+
+
+Eventhandling =()=>
+{
+console.log("This is my first console page")
+console.log(this)
+}
+Myeventhandling = (e) =>
+{
+  alert('WELCOME GUYS IN THIS PAGE');
+  console.log(e)
+}
+
+
+
+render()
+{
+  return(
+    <div>
+      <button onClick={this.Eventhandling}> CLICK ME</button>
+      <button onClick={this.Myeventhandling}> AGAIN CLICK ME</button>
+    </div>
+  )
+}
+}
+ReactDOM.render(<Eventhandle/>,document.getElementById('root'));
