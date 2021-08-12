@@ -517,7 +517,7 @@ ReactDOM.render(<Parent name="Aravind"  ID={1001}/>,document.getElementById('roo
 //   17. React EVENT handling:
 
 
-class Eventhandle extends React.Component{
+/* class Eventhandle extends React.Component{
   constructor(props){
     super(props);
     console.log(this)
@@ -544,8 +544,146 @@ render()
     <div>
       <button onClick={this.Eventhandling}> CLICK ME</button>
       <button onClick={this.Myeventhandling}> AGAIN CLICK ME</button>
+      
     </div>
   )
 }
 }
-ReactDOM.render(<Eventhandle/>,document.getElementById('root'));
+ReactDOM.render(<Eventhandle/>,document.getElementById('root')); */
+
+
+//  18.List and Keys:
+//USING WITH ARRAY:
+
+
+/*function App(){
+  const Courses=[
+      { id:1,   name:'Angular course'  },
+      { id:2,   name:'ReactJs course'  },
+      { id:3,   name:'Node js course'  },
+      { id:4,   name:'Native  course'  },
+      { id:5,   name:'HTML course'  },
+      { id:6,   name:'CSS course'  },
+      { id:7,   name:'Bootstrap course'  },
+      { id:8,   name:'python course'  },
+      { id:9,   name:'java course'  },
+      { id:10,   name:'Javascript course'  }
+
+  ];
+
+  return(
+      <div className='design'>
+        <h1>React List And Key concept tutorial:</h1>
+       <div className='next'>
+      
+
+      {//  without using KEY in array:
+
+
+         //  {<ul>
+        //    {Courses.map(data =>(
+       //
+       //    <li> {data.name}</li>
+      //     ))}
+      //     </ul>}  
+
+
+            // using KEY in Array:
+
+            <ul>
+            {Courses.map(data =>(
+
+              <li key={data.id}>{data.name}</li>
+            ))}
+          </ul><br/>
+           <ul>
+            {
+            Courses.map((data, index) =>(
+
+              <li key={index}>{data.name}</li>
+            ))}
+          </ul>
+          </div>
+      </div>
+  )
+}
+
+ReactDOM.render(<App/>,document.getElementById('root'));*/
+
+
+
+//     Nested Array:
+
+function App(){
+  const Courses=[
+      { id:1,   name:'Angular course'  },
+      { id:2,   name:'ReactJs course'  },
+      { id:3,   name:'Node js course'  },
+      { id:4,   name:'Native  course'  },
+      { id:5,   name:'HTML course'  },
+      { id:6,   name:'CSS course'  },
+      { id:7,   name:'Bootstrap course'  },
+      { id:8,   name:'python course'  },
+      { id:9,   name:'java course'  },
+      { id:10,   name:'Javascript course'  }
+
+  ];
+
+  const Developer=[
+    {
+      name:'Aravind',
+      skills:[
+        {name:'Angular course',type:'front end'},
+        {name:'Node Js',type:'Back end'}
+      ]
+    },
+
+
+    {
+      name:'Kuralarasan',
+      skills:[
+        {name:'html and css', type:'front end'},
+        {name:'python',type:'Back end'}
+      ]
+    }
+  ];
+
+  return (
+    <div className='design'>
+    <h1>React List And Key concept tutorial:</h1>
+   <div className='next'>
+  
+   <ul>
+            {
+            Courses.map((data, index) =>(
+
+              <li key={index}>{data.name}</li>
+            ))}
+          </ul>
+         
+
+    <div className='nested'><h1> Developer part can be created</h1>
+      {Developer.map((dev,index)=>(
+      <div key={index}>
+         <h2> {dev.name}.....SKILLS</h2>
+        <div>
+          {dev.skills.map((skill,index)  =>(
+
+           <h2 key={index}>
+             {skill.type}--{skill.name}
+           </h2>
+           )) }
+        </div>
+        </div>
+       
+
+    ))
+    }
+    </div>
+    </div>
+      </div>
+    
+  )
+}
+
+ReactDOM.render(<App/>,document.getElementById('root'));
